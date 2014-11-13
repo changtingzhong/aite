@@ -1,0 +1,484 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.aiterw</groupId>
+        <artifactId>aiterw</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>aiterw-platform-admin</artifactId>
+    <packaging>war</packaging>
+    
+    <dependencies>
+        <!-- JSR303 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator-legacy</artifactId>
+            <version>4.0.2.GA</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.2.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.2.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>3.2.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>3.2.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>3.2.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+        
+        <!-- Web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>3.2.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.2.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.19</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>2.3.15.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15</artifactId>
+            <version>1.45</version>
+        </dependency>
+        
+        <!-- Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>3.1.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>3.1.3.RELEASE</version>
+        </dependency>
+
+        <!-- Data Access -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>3.2.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>3.2.0.RELEASE</version>
+        </dependency>
+        
+        <!--jmx -->
+        <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jmx</artifactId>
+			<version>2.0.8</version>
+		</dependency>
+        
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+          <groupId>com.rudder</groupId>
+          <artifactId>rudder-db</artifactId>
+          <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.18</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+        </dependency>
+        
+        <!-- commons -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>20040616</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>20041127.091804</version>
+        </dependency>
+        <!-- Export -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.10-beta2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.10-beta2</version>
+        </dependency>
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.0.9</version>
+        </dependency>
+        <!-- Mail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.5</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <!-- 解析Json,xml -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taplinker.pusher</groupId>
+            <artifactId>pusher-mongo</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.5</version>
+        </dependency>
+        
+         <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1</version>
+          </dependency>
+          
+        <dependency>
+            <groupId>net.sf.ezmorph</groupId>
+            <artifactId>ezmorph</artifactId>
+            <version>1.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+        
+        <!-- 计划调度 -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.aiterw</groupId>
+            <artifactId>aiterw-socket-protocol</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.rudder</groupId>
+            <artifactId>rudder-socket</artifactId>
+            <version>1.0.0-RC</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rudder</groupId>
+            <artifactId>rudder-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- Test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.10.v20130312</version>
+                <configuration>
+                    <scanIntervalSeconds>1000</scanIntervalSeconds>
+                    <webAppConfig>
+                        <contextPath>/aiterw</contextPath>
+                    </webAppConfig>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>aiterw</finalName>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>env-proc</id>
+            <properties>
+                <setting.storage.resource.dir>/aiterw/data/resource</setting.storage.resource.dir>
+                <setting.storage.release.dir>/aiterw/data/release</setting.storage.release.dir>
+                <setting.storage.collection.data>/aiterw/data/collection</setting.storage.collection.data>
+
+                <setting.jdbc.driver>com.mysql.jdbc.Driver</setting.jdbc.driver>
+                <setting.jdbc.url>
+                    <![CDATA[jdbc:mysql://192.168.21.15:3306/aiterw?useUnicode=true&amp;characterEncoding=UTF-8&generateSimpleParameterMetadata=true]]>
+                </setting.jdbc.url>
+                <setting.jdbc.username>aiterw</setting.jdbc.username>
+                <setting.jdbc.password>1q2w3e4r5t</setting.jdbc.password>
+
+                <settings.mongo.host>192.168.21.16</settings.mongo.host>
+                <settings.mongo.port>27017</settings.mongo.port>
+                <settings.mongo.db>aiterw</settings.mongo.db>
+
+                <setting.mail.smtp.host>mail.shwencong.com</setting.mail.smtp.host>
+                <setting.mail.smtp.port>25</setting.mail.smtp.port>
+                <setting.mail.smtp.username>aiterw@shwencong.com</setting.mail.smtp.username>
+                <setting.mail.smtp.password>wckj123456</setting.mail.smtp.password>
+                
+                <!-- cluster node configure --> 
+                <cluster_node.unique>s1_00001</cluster_node.unique>
+                <cluster_node.outIp>192.168.21.12</cluster_node.outIp>
+                <cluster_node.outPort>4398</cluster_node.outPort>
+                <cluster_node.ip>192.168.21.12</cluster_node.ip>
+                <cluster_node.port>4398</cluster_node.port>
+                <cluster_node.soBacklog>100000</cluster_node.soBacklog>
+                <cluster_node.soKeepalive>true</cluster_node.soKeepalive>
+                <cluster_node.readIdleSecond>360</cluster_node.readIdleSecond>
+                <cluster_node.writeIdleSecond>300</cluster_node.writeIdleSecond>
+                <cluster_node.clusterNode>false</cluster_node.clusterNode>
+                <cluster_node.cc.ip>127.0.0.1</cluster_node.cc.ip>
+                <cluster_node.cc.port>8080</cluster_node.cc.port>
+                <cluster_node.cc.rdata>0</cluster_node.cc.rdata>
+                <cluster_node.cc.interval>0</cluster_node.cc.interval>
+                <setting.log.file>/aiterw/logs/aiterw.log</setting.log.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>env-test-21</id>
+            <properties>
+                <!-- 数据数据 -->
+                <setting.storage.resource.dir>/aiterw/data/resource</setting.storage.resource.dir>
+                <setting.storage.release.dir>/aiterw/data/release</setting.storage.release.dir>
+                <setting.storage.collection.data>/aiterw/data/collection</setting.storage.collection.data>
+
+                <!-- DB -->
+                <setting.jdbc.driver>com.mysql.jdbc.Driver</setting.jdbc.driver>
+               <!-- 	<setting.jdbc.url>
+                    <![CDATA[jdbc:mysql://101.226.196.35:3306/testenv?useUnicode=true&amp;characterEncoding=UTF-8&generateSimpleParameterMetadata=true]]>
+                </setting.jdbc.url>
+                <setting.jdbc.username>testenv</setting.jdbc.username>
+                <setting.jdbc.password>1qaz2wsx</setting.jdbc.password>
+                -->
+                
+                <setting.jdbc.url>
+                    <![CDATA[jdbc:mysql://192.168.2.21:3306/aiterw?useUnicode=true&amp;characterEncoding=UTF-8&generateSimpleParameterMetadata=true]]>
+                </setting.jdbc.url>
+                <setting.jdbc.username>aiterw</setting.jdbc.username>
+                <setting.jdbc.password>1q2w3e4r5t</setting.jdbc.password> 
+                 
+
+                <!-- Mongodb -->
+                <settings.mongo.host>192.168.2.21</settings.mongo.host> 
+               <!--  <settings.mongo.host>101.226.196.35</settings.mongo.host> -->
+                <settings.mongo.port>27017</settings.mongo.port>
+                <settings.mongo.db>aiterw</settings.mongo.db>
+
+                <!-- Mail -->
+                <setting.mail.smtp.host>mail.3ti.us</setting.mail.smtp.host>
+                <setting.mail.smtp.port>25</setting.mail.smtp.port>
+                <setting.mail.smtp.username>taplinker_news@3ti.us</setting.mail.smtp.username>
+                <setting.mail.smtp.password>!Q@W#E$R%T</setting.mail.smtp.password>
+
+                <!-- Socket 通讯 -->
+                <!-- cluster node configure --> 
+                <cluster_node.unique>s1_00001</cluster_node.unique>
+                <cluster_node.outIp>101.230.8.66</cluster_node.outIp>
+                <cluster_node.outPort>7002</cluster_node.outPort>
+                <cluster_node.ip>192.168.2.21</cluster_node.ip>
+                <cluster_node.port>4398</cluster_node.port>
+                <cluster_node.soBacklog>100000</cluster_node.soBacklog>
+                <cluster_node.soKeepalive>true</cluster_node.soKeepalive>
+                <cluster_node.readIdleSecond>360</cluster_node.readIdleSecond>
+                <cluster_node.writeIdleSecond>300</cluster_node.writeIdleSecond>
+                <!-- Must be set as false if it is not clustered environment -->
+                <cluster_node.clusterNode>false</cluster_node.clusterNode>
+                <!-- Below control centre configuration is fake -->
+                <cluster_node.cc.ip>127.0.0.1</cluster_node.cc.ip>
+                <cluster_node.cc.port>8080</cluster_node.cc.port>
+                <cluster_node.cc.rdata>0</cluster_node.cc.rdata>
+                <cluster_node.cc.interval>0</cluster_node.cc.interval>
+                <setting.log.file>/aiterw/logs/aiterw.log</setting.log.file>  
+           </properties>
+        </profile>
+
+        <profile>
+            <id>env-test-localhost</id>
+            <properties>
+                <setting.storage.resource.dir>d:/aiterw/resource</setting.storage.resource.dir>
+                <setting.storage.release.dir>d:/aiterw/release</setting.storage.release.dir>
+                <setting.storage.collection.data>d:/aiterw/collection</setting.storage.collection.data>
+
+                <setting.jdbc.driver>com.mysql.jdbc.Driver</setting.jdbc.driver>
+                <setting.jdbc.url>
+                    <![CDATA[jdbc:mysql://192.168.2.21:3306/aiterw?useUnicode=true&amp;characterEncoding=UTF-8&generateSimpleParameterMetadata=true]]>
+                </setting.jdbc.url>
+                <setting.jdbc.username>root</setting.jdbc.username>
+                <setting.jdbc.password>1q2w3e4r5t</setting.jdbc.password>
+
+                <settings.mongo.host>192.168.2.21</settings.mongo.host>
+                <settings.mongo.port>27017</settings.mongo.port>
+                <settings.mongo.db>aiterw</settings.mongo.db>
+
+                <setting.mail.smtp.host>mail.3ti.us</setting.mail.smtp.host>
+                <setting.mail.smtp.port>25</setting.mail.smtp.port>
+                <setting.mail.smtp.username>taplinker_news@3ti.us</setting.mail.smtp.username>
+                <setting.mail.smtp.password>!Q@W#E$R%T</setting.mail.smtp.password>
+
+                <cluster_node.unique>s1_00001</cluster_node.unique>
+                <cluster_node.outIp></cluster_node.outIp>
+                <cluster_node.outPort></cluster_node.outPort>
+                <cluster_node.ip>127.0.0.1</cluster_node.ip>
+                <cluster_node.port>4398</cluster_node.port>
+                <cluster_node.soBacklog>100000</cluster_node.soBacklog>
+                <cluster_node.soKeepalive>true</cluster_node.soKeepalive>
+                <cluster_node.readIdleSecond>360</cluster_node.readIdleSecond>
+                <cluster_node.writeIdleSecond>300</cluster_node.writeIdleSecond>
+                
+                <cluster_node.clusterNode>false</cluster_node.clusterNode>
+                <cluster_node.cc.ip></cluster_node.cc.ip>
+                <cluster_node.cc.port></cluster_node.cc.port>
+                <cluster_node.cc.rdata></cluster_node.cc.rdata>
+                <cluster_node.cc.interval></cluster_node.cc.interval>
+                <setting.log.file>/usr/local/tomcat/aiterw.log</setting.log.file>
+            </properties>
+        </profile>
+    </profiles>
+</project>
